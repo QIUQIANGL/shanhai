@@ -8,11 +8,13 @@ interface LayoutProps {
   onNavigate: (view: PageView) => void;
 }
 
-// 导航栏数据配置
+// 导航栏数据配置 (扩展至 7 个栏目)
 const NAV_ITEMS: NavItem[] = [
   { label: '首页', view: PageView.HOME },
   { label: '山海概览', view: PageView.INTRO },
   { label: '文化溯源', view: PageView.CULTURE },
+  { label: '影音资料', view: PageView.MEDIA }, // New
+  { label: '关于我们', view: PageView.ABOUT }, // New
   { label: '会员登录', view: PageView.LOGIN },
   { label: '账号注册', view: PageView.REGISTER },
 ];
@@ -45,13 +47,13 @@ const Layout: React.FC<LayoutProps> = ({ children, currentView, onNavigate }) =>
             </div>
 
             {/* 桌面端导航 nav + ul + li + a */}
-            <nav className="hidden md:flex space-x-8">
-              <ul className="flex space-x-6">
+            <nav className="hidden md:flex space-x-4">
+              <ul className="flex space-x-2 lg:space-x-6">
                 {NAV_ITEMS.map((item) => (
                   <li key={item.view}>
                     <button
                       onClick={() => handleNavClick(item.view)}
-                      className={`px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+                      className={`px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors duration-300 ${
                         currentView === item.view
                           ? 'text-classic-red bg-red-50'
                           : 'text-gray-600 hover:text-classic-red hover:bg-stone-50'

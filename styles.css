@@ -1,0 +1,46 @@
+/* 
+   课程设计要求：外部样式表 (External CSS)
+   包含全局样式、滚动条美化及 CSS3 动画定义
+*/
+
+/* 1. 全局样式重置与背景 */
+body {
+  background-color: #f7f5f0; /* 仿宣纸纹理底色 */
+  color: #2c2c2c;
+  margin: 0;
+  font-family: 'Noto Serif SC', serif; /* 默认使用衬线体营造古风 */
+}
+
+/* 2. Webkit 滚动条美化 (CSS3) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e5e5e5;
+}
+::-webkit-scrollbar-thumb {
+  background: #8e352e; /* 古典红 */
+  border-radius: 4px;
+}
+
+/* 3. CSS3 关键帧动画 (Keyframes) */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 4. 自定义工具类 */
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* 古风渐变文字效果 (CSS3 linear-gradient + background-clip) */
+.text-gradient-gold {
+  background: linear-gradient(to right, #b4912f, #8e352e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -3,6 +3,8 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Intro from './pages/Intro';
 import Culture from './pages/Culture';
+import Media from './pages/Media';
+import About from './pages/About';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { PageView } from './types';
@@ -23,6 +25,10 @@ const App: React.FC = () => {
         return <Intro />;
       case PageView.CULTURE:
         return <Culture />;
+      case PageView.MEDIA:
+        return <Media />;
+      case PageView.ABOUT:
+        return <About />;
       case PageView.LOGIN:
         return <Login onNavigate={setCurrentView} />;
       case PageView.REGISTER:

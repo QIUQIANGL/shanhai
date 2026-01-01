@@ -5,6 +5,8 @@ export enum PageView {
   HOME = 'home',
   INTRO = 'intro',
   CULTURE = 'culture',
+  MEDIA = 'media',   // 新增：影音资料
+  ABOUT = 'about',   // 新增：关于我们
   LOGIN = 'login',
   REGISTER = 'register'
 }
