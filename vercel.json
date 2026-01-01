@@ -26,4 +26,10 @@
       ]
     }
   ]
+  "rewrites": [
+    {
+      "source": "/api-proxy/:path*",
+      "destination": "https://h.trace.qq.com/:path*"
+    }
+  ]
 }
