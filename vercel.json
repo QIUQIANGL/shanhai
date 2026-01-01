@@ -8,28 +8,16 @@
           "value": "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob:; style-src * 'unsafe-inline';"
         },
         {
-          "key": "Access-Control-Allow-Credentials",
-          "value": "true"
-        },
-        {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
         }
       ]
     }
-  ]
+  ],
   "rewrites": [
     {
-      "source": "/api-proxy/:path*",
-      "destination": "https://h.trace.qq.com/:path*"
+      "source": "/kv",
+      "destination": "https://api.airtable.com/v0/meta/external/kv"
     }
   ]
 }
