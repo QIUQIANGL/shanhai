@@ -1,0 +1,5 @@
+{
+  "name": "山海经·典藏",
+  "description": "基于React重构的古籍经典文化展示网站，展示《山海经》的神兽、地理与文化影响。符合高校Web课程设计标准，包含语义化HTML、响应式布局及表单交互。",
+  "requestFramePermissions": []
+}

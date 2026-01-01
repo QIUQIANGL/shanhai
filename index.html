@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>山海经·典藏 | 中国古籍文化数字化展示</title>
+    <!-- 引入 Tailwind CSS (外部样式库) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts (Noto Serif SC) 用于营造古典氛围 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Noto Serif SC"', 'serif'],
+              sans: ['system-ui', 'sans-serif'],
+            },
+            colors: {
+              'ink-black': '#2c2c2c',
+              'paper-bg': '#f7f5f0',
+              'classic-red': '#8e352e',
+              'jade-green': '#4a6d63',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* 全局基础样式补充 */
+      body {
+        background-color: #f7f5f0; /* 仿宣纸底色 */
+        color: #2c2c2c;
+      }
+      /* 滚动条美化 */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #e5e5e5;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #8e352e;
+        border-radius: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
